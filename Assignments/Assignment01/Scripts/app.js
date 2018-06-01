@@ -63,7 +63,6 @@ let app = (function () {
                 break;
 
             case "COMP125 - a01 - Contact":
-                ContactsContent();
                 break;
 
             default:
