@@ -1,1 +1,17 @@
 /* Custom CSS goes here */
+#contentPlacement{
+    padding: 1em;
+}
+#bodyBackground{
+	background-image: url('../Assets/images/city.png');
+    background-repeat: repeat;
+    background-size:  cover;
+}
+#picture{
+    opacity: 1.0;
+}
+hr{
+    color: #000000;
+    margin: 1em;
+    border-width: 0.2em;
+}
