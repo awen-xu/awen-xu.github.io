@@ -1,4 +1,3 @@
-/* Custom JS goes here */
 /*
 File name: app.js
 Author's name: Awen Xu
@@ -7,10 +6,11 @@ File description: This is the JavaScript file for all three pages of the mini po
     This file is mainly used to enter text into the pages.
 */
 
-// IIFE 
-let app = (function () {
+// IIFE
+(function () {
     "use strict"
 
+    // Function that runs and insert text when on Bio page
     function BioContent() {
         // Title for the page
         let bioTitle = "About Me"
@@ -29,7 +29,9 @@ let app = (function () {
     }
 
 
+    // Function that runs and insert text when on Project page
     function ProjectsContent() {
+        // Text for the heading of Project page
         let pageTitle = "My Previous Projects";
         let pageHeading = document.getElementById("projectHeading");
         pageHeading.textContent = pageTitle;
@@ -37,7 +39,7 @@ let app = (function () {
         let pageDesc = document.getElementById("pageDescription");
         pageDesc.textContent = myPageDesc;
 
-        // inserting text for project 1
+        // Inserting text for project 1
         let projectTitle1 = "Unity Game - Fortissimo";
         let title1 = document.getElementById("title1");
         title1.textContent = projectTitle1;
@@ -45,7 +47,7 @@ let app = (function () {
         let paragraph1 = document.getElementById("paragraph1");
         paragraph1.textContent = project1;
 
-        // inserting text for project 2
+        // Inserting text for project 2
         let projectTitle2 = "TicTacToe – Java RTP";
         let title2 = document.getElementById("title2");
         title2.textContent = projectTitle2;
@@ -53,7 +55,7 @@ let app = (function () {
         let paragraph2 = document.getElementById("paragraph2");
         paragraph2.textContent = project2;
 
-        // inserting text for project 3
+        // Inserting text for project 3
         let projectTitle3 = "Battleship – Java RTP";
         let title3 = document.getElementById("title3");
         title3.textContent = projectTitle3;
@@ -62,8 +64,14 @@ let app = (function () {
         paragraph3.textContent = project3;
     }
 
+
+    // Function that runs and insert text when on Contact page
     function ContactContent(){
-        // text for contact page
+        // Text for contact page
+        let title = "Send Me A Message";
+        let contactHeader = document.getElementById("contactTitle");
+        contactHeader.textContent = title;
+
         let myContactStatement = "Write a message with the form below, and I will get back to you as soon as possible!";
         let contactInfo = document.getElementById("contactInfo");
         contactInfo.textContent = myContactStatement;
@@ -71,14 +79,10 @@ let app = (function () {
         let myContactInstructions = "* Required";
         let contactInstruction = document.getElementById("contactInstructions");
         contactInstruction.textContent = myContactInstructions;
-
-        let title = "Send Me A Message";
-        let contactHeader = document.getElementById("contactTitle");
-        contactHeader.textContent = title;
-
     }
 
 
+    // start up function to determine which page user is on and which function to call
     function Start() {
         let title = document.title;
 
@@ -86,6 +90,7 @@ let app = (function () {
         console.log("----------------------------");
         console.log("Title: " + title);
 
+        // Based on the current page, call the corresponding function
         switch (title) {
             case "COMP125 - a01 - Bio":
                 BioContent();
