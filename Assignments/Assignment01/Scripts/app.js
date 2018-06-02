@@ -1,18 +1,24 @@
 /* Custom JS goes here */
+/*
+File name: app.js
+Author's name: Awen Xu
+Website: Mini Portfolio
+File description: This is the JavaScript file for all three pages of the mini portfolio. 
+    This file is mainly used to enter text into the pages.
+*/
 
-// IIFE - Immediately Invoked Function Expression
-// anonymous self executing function
+// IIFE 
 let app = (function () {
     "use strict"
 
     function BioContent() {
-        // Title
+        // Title for the page
         let bioTitle = "About Me"
         let pageTitle = document.getElementById("bioHeading");
         pageTitle.textContent = bioTitle;
 
         // Mission statement
-        let missionStatement = "My mission is to learn all that I want with the resources available to me.";
+        let missionStatement = "My mission is to learn all I want with the resources available to me.";
         let sentence = document.getElementById("missionStatement");
         sentence.textContent = missionStatement;
 
@@ -24,6 +30,14 @@ let app = (function () {
 
 
     function ProjectsContent() {
+        let pageTitle = "My Previous Projects";
+        let pageHeading = document.getElementById("projectHeading");
+        pageHeading.textContent = pageTitle;
+        let myPageDesc = "Here are three projects of mine. They are some of my favourites.";
+        let pageDesc = document.getElementById("pageDescription");
+        pageDesc.textContent = myPageDesc;
+
+        // inserting text for project 1
         let projectTitle1 = "Unity Game - Fortissimo";
         let title1 = document.getElementById("title1");
         title1.textContent = projectTitle1;
@@ -31,6 +45,7 @@ let app = (function () {
         let paragraph1 = document.getElementById("paragraph1");
         paragraph1.textContent = project1;
 
+        // inserting text for project 2
         let projectTitle2 = "TicTacToe – Java RTP";
         let title2 = document.getElementById("title2");
         title2.textContent = projectTitle2;
@@ -38,6 +53,7 @@ let app = (function () {
         let paragraph2 = document.getElementById("paragraph2");
         paragraph2.textContent = project2;
 
+        // inserting text for project 3
         let projectTitle3 = "Battleship – Java RTP";
         let title3 = document.getElementById("title3");
         title3.textContent = projectTitle3;
@@ -45,6 +61,23 @@ let app = (function () {
         let paragraph3 = document.getElementById("paragraph3");
         paragraph3.textContent = project3;
     }
+
+    function ContactContent(){
+        // text for contact page
+        let myContactStatement = "Write a message with the form below, and I will get back to you as soon as possible!";
+        let contactInfo = document.getElementById("contactInfo");
+        contactInfo.textContent = myContactStatement;
+        
+        let myContactInstructions = "* Required";
+        let contactInstruction = document.getElementById("contactInstructions");
+        contactInstruction.textContent = myContactInstructions;
+
+        let title = "Send Me A Message";
+        let contactHeader = document.getElementById("contactTitle");
+        contactHeader.textContent = title;
+
+    }
+
 
     function Start() {
         let title = document.title;
@@ -63,6 +96,7 @@ let app = (function () {
                 break;
 
             case "COMP125 - a01 - Contact":
+                ContactContent();
                 break;
 
             default:
@@ -70,9 +104,4 @@ let app = (function () {
         }
     }
     window.addEventListener("load", Start);
-
-    return {
-        title: document.title
-
-    };
 })();

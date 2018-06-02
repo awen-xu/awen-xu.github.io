@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>COMP125 - a01 - Projects</title>
+
   <!-- CSS Section -->
   <link rel="stylesheet" href="../../Content/bootstrap-solar.min.css">
   <link rel="stylesheet" href="../../node_modules/font-awesome/css/font-awesome.min.css">
@@ -22,7 +23,6 @@
       aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
@@ -47,48 +47,56 @@
     </div>
   </nav>
 
+  <!--The project page header-->
+  <div class="jumbotron">
+    <h1 class="display-4 text-center text-primary" id="projectHeading"></h1>
+    <p class="lead text-center" id="pageDescription"></p>
+  </div>
 
-  <div class="container" id="contentPlacement">
-    <div class="jumbotron" id="contentPlacement">
+  <!--The three projects-->
+  <div class="container contentPlacement">
+    <div class="jumbotron contentPlacement">
+
+      <!--Projects 1: Unity Game-->
       <div class="row justify-content-center">
-        <div class="col-md-6" id="contentPlacement">
-          <img src="./Assets/images/fortissimo_gameplay.png" id="picture" width=100% height=auto alt="">
+        <div class="col-md-6 contentPlacement">
+          <img src="./Assets/images/fortissimo_gameplay.png" class="pictureScaling" alt="">
         </div>
-        <div class="col-md-6" id="contentPlacement">
-          <h3 id="title1"></h3>
+        <div class="col-md-6 contentPlacement">
+          <h3 id="title1" class="text-primary"></h3>
           <p id="paragraph1"></p>
         </div>
       </div>
       <hr>
+
+      <!--Projects 2: Tic Tac Toe-->
       <div class="row justify-content-center">
-        
-        <div class="col-md-6" id="contentPlacement">
-          <h3 id="title2"></h3>
+        <div class="col-md-6 contentPlacement">
+          <h3 id="title2" class="text-primary"></h3>
           <p id="paragraph2"></p>
         </div>
         <div class="col-md-6">
-            <img src="./Assets/images/tictactoe_gameplay.png" id="picture" width=100% height=auto alt="">
-          </div>
+          <img src="./Assets/images/tictactoe_gameplay.png" class="pictureScaling" alt="">
+        </div>
       </div>
       <hr>
+
+      <!--Projects 3: Battleship-->
       <div class="row justify-content-center">
-        <div class="col-md-6" id="contentPlacement">
-          <img src="./Assets/images/battleship_attack.png" id="picture" width=100% height=auto alt="">
+        <div class="col-md-6 contentPlacement">
+          <img src="./Assets/images/battleship_attack.png" class="pictureScaling" alt="">
         </div>
-        <div class="col-md-6" id="contentPlacement">
-          <h3 id="title3"></h3>
+        <div class="col-md-6 contentPlacement">
+          <h3 id="title3" class="text-primary"></h3>
           <p id="paragraph3"></p>
         </div>
       </div>
     </div>
   </div>
 
-
-
   <!-- JavaScript Section -->
   <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
   <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="./Scripts/app.js"></script>
 </body>
-
 </html>
