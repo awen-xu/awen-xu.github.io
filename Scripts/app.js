@@ -29,7 +29,7 @@ let app = (function () {
                 HomeContent();
                 break;
 
-            case "COMP125 - Assignments":
+            case "COMP125 - School":
                 AssignmentsContent();
                 break;
 
