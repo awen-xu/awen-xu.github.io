@@ -1,3 +1,9 @@
+/*
+File name: contact.js
+Author's name: Awen Xu
+Website: Mini Portfolio
+File description: This is the JavaScript file for the contact page of the mini portfolio. 
+*/
 ((content) => {
     // Local variables
     let FirstName = document.getElementById("FirstName");
@@ -7,11 +13,14 @@
     let Subject = document.getElementById("Subject");
     let Message = document.getElementById("Message");
 
+
+    // Displays in the console - the form data entered by user
     function OutputFormDataToConsole() {
         console.log(`%c ---------------------------------------`, "color: blue;");
         console.log(`%c Form Data`, "font-weight:bold; font-size: 16px; color: blue;");
         console.log(`%c ---------------------------------------`, "color: blue;");
-        console.log(`%c Full Name     : ${FirstName.value} ${LastName.value}`, "color: blue;");
+        console.log(`%c First Name    : ${FirstName.value}`, "color: blue;");
+        console.log(`%c Last Name     : ${LastName.value}`, "color: blue;");
         console.log(`%c Contact Number: ${ContactNumber.value}`, "color: blue;");
         console.log(`%c Email Address : ${EmailAddress.value}`, "color: blue;");
         console.log(`%c Subject       : ${Subject.value}`, "color: blue;");
@@ -19,6 +28,8 @@
         console.log(`%c ---------------------------------------`, "color: blue;");
     }
 
+
+    // Clears the validation message
     function ClearValidationMessage() {
         FirstName.setCustomValidity("");
         LastName.setCustomValidity("");
@@ -29,6 +40,8 @@
     }
 
 
+    // Event handlers for form elements
+    // Sets the validation message depending on the element
     function setEventHandlersForFormElements() {
         for (const element of document.forms[0].elements) {
             if ((element.tagName === "INPUT") || (element.tagName === "TEXTAREA")) {
@@ -66,10 +79,14 @@
         }
     }
 
+
+    // calls the setEventHandlersForFormElements function
     function ValidateForm() {
         setEventHandlersForFormElements();
     }
 
+
+    // function that runs when the contact page is loaded
     function ContactContent() {
         //inserts text - title and instructions for form
         let title = "Send Me A Message";
@@ -82,6 +99,7 @@
         let contactInstruction = document.getElementById("contactInstructions");
         contactInstruction.textContent = myContactInstructions;
 
+        // clears the validation messages initially
         ClearValidationMessage();
 
         // create a new HTML Element
@@ -92,13 +110,13 @@
         cancelButton.textContent = "Cancel";
         cancelButton.addEventListener("click", function (event) {
             event.preventDefault();
-            window.open("a01_index.html", "_parent");
+            window.open("a02_index.html", "_parent");
         });
         // add the HTML Element to the page somewhere 
         // in this case I'm attaching a button to the first forml element
         document.forms[0].appendChild(cancelButton);
 
-
+        // configure the submit button
         let SendButton = document.getElementById("submitButton");
         SendButton.addEventListener("click", (event) => {
             if (!document.forms[0].checkValidity()) {
@@ -110,5 +128,4 @@
 
     // public functions exposed to the content namespace
     content.ContactContent = ContactContent;
-
 })(content || (content = {}));

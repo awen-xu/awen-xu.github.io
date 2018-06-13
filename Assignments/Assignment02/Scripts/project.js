@@ -1,6 +1,13 @@
-((content) =>{
+/*
+File name: project.js
+Author's name: Awen Xu
+Website: Mini Portfolio
+File description: This is the JavaScript file for the project page of the mini portfolio. 
+    This file is mainly used to enter text into the pages.
+*/
 
-    // Function that runs and insert text when on Project page
+((content) =>{
+    // Function that runs when on Project page
     function ProjectsContent() {
         // Text for the heading of Project page
         let pageTitle = "My Previous Projects";
@@ -36,5 +43,4 @@
     }
 
     content.ProjectsContent = ProjectsContent;
-
 })(content||(content = {}));
