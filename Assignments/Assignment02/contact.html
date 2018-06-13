@@ -61,14 +61,18 @@
           <p id="contactInstructions" class="text-warning"></p>
 
           <!--Form-->
-          <form action="./a01_index.html">
+          <form>
             <div class="form-group">
-              <label for="Name">Name: *</label>
-              <input type="text" class="form-control form-control-lg" id="Name" pattern="[A-Za-z]{2}" name="Name" required>
+              <label for="FirstName">First Name: *</label>
+              <input type="text" class="form-control form-control-lg" id="FirstName" pattern="[A-Za-z]{2}" name="FirstName" required>
             </div>
             <div class="form-group">
-              <label for="ContactNumber">Phone Number:</label>
-              <input type="text" class="form-control form-control-lg" id="ContactNumber" pattern="^(\+0?1\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$" name="ContactNumber" placeholder="123-456-7890">
+              <label for="LastName">Last Name: *</label>
+              <input type="text" class="form-control form-control-lg" id="LastName" pattern="[A-Za-z]{2}" name="LastName" required>
+            </div>
+            <div class="form-group">
+              <label for="ContactNumber">Phone Number: *</label>
+              <input type="text" class="form-control form-control-lg" id="ContactNumber" pattern="^(\+0?1\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$" name="ContactNumber" placeholder="123-456-7890" required>
             </div>
             <div class="form-group">
               <label for="EmailAddress">Email address: *</label>
