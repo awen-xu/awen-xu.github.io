@@ -29,7 +29,7 @@ File description: This is the JavaScript file for the contact page of the mini p
     }
 
 
-    // Clears the validation message
+    // Clears the validation message for the form elements
     function ClearValidationMessage() {
         FirstName.setCustomValidity("");
         LastName.setCustomValidity("");
