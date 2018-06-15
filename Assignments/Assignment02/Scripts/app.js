@@ -13,10 +13,9 @@ let app;
     function Start() {
         let title = document.title;
 
-        console.log("App Started!");
-        console.log("----------------------------");
-        console.log("Title: " + title);
-
+        console.log(`%c ----------APP STARTED---------- `, "font-weight: bold; font-size: 16px; color: maroon; background-color: rgba(0, 255, 0, 0.3);");
+        console.log(`%c Title: ${title}`, "color: maroon; font-style: italic;");
+        
         // Based on the current page, call the corresponding function
         switch (title) {
             case "COMP125 - a02 - Bio":

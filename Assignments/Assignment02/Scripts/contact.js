@@ -16,16 +16,13 @@ File description: This is the JavaScript file for the contact page of the mini p
 
     // Displays in the console - the form data entered by user
     function OutputFormDataToConsole() {
-        console.log(`%c ---------------------------------------`, "color: blue;");
-        console.log(`%c Form Data`, "font-weight:bold; font-size: 16px; color: blue;");
-        console.log(`%c ---------------------------------------`, "color: blue;");
-        console.log(`%c First Name    : ${FirstName.value}`, "color: blue;");
-        console.log(`%c Last Name     : ${LastName.value}`, "color: blue;");
-        console.log(`%c Contact Number: ${ContactNumber.value}`, "color: blue;");
-        console.log(`%c Email Address : ${EmailAddress.value}`, "color: blue;");
-        console.log(`%c Subject       : ${Subject.value}`, "color: blue;");
-        console.log(`%c Your Message  : ${Message.value}`, "color: blue;");
-        console.log(`%c ---------------------------------------`, "color: blue;");
+        console.log(`%c -----------FORM DATA----------- `, "font-weight: bold; font-size: 16px; color: maroon; background-color: rgba(0, 255, 0, 0.3);");
+        console.log(`%c First Name     : ${FirstName.value}`, "color: maroon; font-style: italic;");
+        console.log(`%c Last Name      : ${LastName.value}`, "color: maroon; font-style: italic;");
+        console.log(`%c Contact Number : ${ContactNumber.value}`, "color: maroon; font-style: italic;");
+        console.log(`%c Email Address  : ${EmailAddress.value}`, "color: maroon; font-style: italic;");
+        console.log(`%c Subject        : ${Subject.value}`, "color: maroon; font-style: italic;");
+        console.log(`%c Your Message   : ${Message.value}`, "color: maroon; font-style: italic;");
     }
 
 
@@ -53,10 +50,10 @@ File description: This is the JavaScript file for the contact page of the mini p
                 element.addEventListener("invalid", function () {
                     switch (element.id) {
                         case "FirstName":
-                            element.setCustomValidity("Enter first name with at least 2 letters");
+                            element.setCustomValidity("Enter a first name with at least 2 letters");
                             break;
                         case "LastName":
-                            element.setCustomValidity("Enter last name with at least 2 letters");
+                            element.setCustomValidity("Enter a last name with at least 2 letters");
                             break;
                         case "ContactNumber":
                             element.setCustomValidity("Enter a phone number with the pattern (###) ###-####");
@@ -104,6 +101,7 @@ File description: This is the JavaScript file for the contact page of the mini p
 
         // create a new HTML Element
         let cancelButton = document.createElement("button");
+
         // configure the HTML Element
         cancelButton.setAttribute("class", "btn btn-secondary btn-block");
         cancelButton.classList.add("btn-lg");
@@ -112,6 +110,7 @@ File description: This is the JavaScript file for the contact page of the mini p
             event.preventDefault();
             window.open("a02_index.html", "_parent");
         });
+
         // add the HTML Element to the page somewhere 
         // in this case I'm attaching a button to the first forml element
         document.forms[0].appendChild(cancelButton);
