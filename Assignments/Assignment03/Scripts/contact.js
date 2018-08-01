@@ -1,6 +1,7 @@
 /*
 File name: contact.js
 Author's name: Awen Xu
+Student number: 300992536
 Website: Mini Portfolio
 File description: This is the JavaScript file for the contact page of the mini portfolio. 
 */
@@ -83,21 +84,17 @@ File description: This is the JavaScript file for the contact page of the mini p
     }
 
 
-
-    // function that runs when the contact page is loaded
+    // main function that runs when on contact.html
     function ContactContent() {
-        //inserts text - title and instructions for form
+        //inserts title in the h tag
         let title = "Send Me A Message";
         let contactHeader = document.getElementById("contactTitle");
         contactHeader.textContent = title;
 
-        // clears the validation messages initially
         ClearValidationMessage();
 
-        // create a new HTML Element
+        // create a new HTML Element(cancel button), configure it, and add to page
         let cancelButton = document.createElement("button");
-
-        // configure the HTML Element
         cancelButton.setAttribute("class", "btn btn-secondary btn-block");
         cancelButton.classList.add("btn-lg");
         cancelButton.textContent = "Cancel";
@@ -105,9 +102,6 @@ File description: This is the JavaScript file for the contact page of the mini p
             event.preventDefault();
             window.open("a03_index.html", "_parent");
         });
-
-        // add the HTML Element to the page somewhere 
-        // in this case I'm attaching a button to the first forml element
         document.forms[0].appendChild(cancelButton);
 
         // configure the submit button

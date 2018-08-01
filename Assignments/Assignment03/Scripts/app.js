@@ -1,6 +1,7 @@
 /*
 File name: app.js
 Author's name: Awen Xu
+Student number: 300992536
 Website: Mini Portfolio
 File description: This is the JavaScript file for switching to the different pages of the mini portfolio. 
 */
@@ -13,9 +14,15 @@ let app;
     let pElements;
     let pId;
 
+    /**
+     * This function loads the paragraphs.json file and
+     * inserts the correct paragraph text into the p tags
+     * in the html files.
+     *
+     */
     function loadParagraphs() {
-
         XHR = new XMLHttpRequest();
+
         XHR.addEventListener("readystatechange", function () {
             if (this.status === 200) {
                 if (this.readyState === 4) {
@@ -28,6 +35,7 @@ let app;
                             pId = pElements[p].id;
 
                             // loop through the data in paragraphs.json
+                            // inserts value (string text) based on when the paragraph id matches the key 
                             for (const property in paragraphs) {
                                 if (paragraphs.hasOwnProperty(property)) {
                                     if (property == pId) {
@@ -44,10 +52,11 @@ let app;
         XHR.send();
     }
 
+    
     /**
    * This function inserts HTML from a file or other location
    * into the specificied tag / element that exists on the 
-   * index.html page
+   * html page
    *
    * @param {string} sourceURL
    * @param {string} destTag
@@ -61,10 +70,6 @@ let app;
                 if (this.readyState === 4) {
                     target.innerHTML = this.responseText;
                     setActiveNavLink();
-
-                    if (document.title == "Contact") {
-                        loadJSON();
-                    }
                 }
             }
         });
@@ -72,26 +77,26 @@ let app;
         XHR.send();
     }
 
+
+    /**
+     * This function assigns the 'active' class to the correct item in the navigation
+     *
+     */
     function setActiveNavLink() {
         // clears the "active" class from each of the list items in the navigation
-        document.querySelectorAll("li.nav-item").forEach(function(listItem){
-          listItem.setAttribute("class", "nav-item");
+        document.querySelectorAll("li.nav-item").forEach(function (listItem) {
+            listItem.setAttribute("class", "nav-item");
         });
-    
+
         // add the "active" class to the class attribute of the appropriate list item
         document.getElementById(document.title).classList.add("active");
-    
-    
-      }
+    }
 
-    // start up function to determine which page user is on and which function to call
+
     function Start() {
         let title = document.title;
 
-        console.log(`%c ----------APP STARTED---------- `, "font-weight: bold; font-size: 16px; color: maroon; background-color: rgba(0, 255, 0, 0.3);");
-        console.log(`%c Title: ${title}`, "color: maroon; font-style: italic;");
-
-        // Based on the current page, call the corresponding function
+        // Based on the title of the current page, call the corresponding function
         switch (title) {
             case "COMP125 - a03 - Bio":
                 content.BioContent();
@@ -112,11 +117,10 @@ let app;
         loadParagraphs();
 
         insertHTML("./Views/partials/header.html", "header");
-
-
         insertHTML("./Views/partials/footer.html", "footer");
-
     }
+
     window.addEventListener("load", Start);
     app.title = document.title;
+
 })(app || (app = {}));
