@@ -91,15 +91,6 @@ File description: This is the JavaScript file for the contact page of the mini p
         let contactHeader = document.getElementById("contactTitle");
         contactHeader.textContent = title;
 
-
-        /*
-        let myContactStatement = "Write a message with the form below, and I will get back to you as soon as possible!";
-        let contactInfo = document.getElementById("contactInfo");
-        contactInfo.textContent = myContactStatement;
-        let myContactInstructions = "* Required";
-        let contactInstruction = document.getElementById("contactInstructions");
-        contactInstruction.textContent = myContactInstructions;*/
-
         // clears the validation messages initially
         ClearValidationMessage();
 
