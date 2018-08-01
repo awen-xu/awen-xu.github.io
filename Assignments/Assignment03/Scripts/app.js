@@ -72,6 +72,18 @@ let app;
         XHR.send();
     }
 
+    function setActiveNavLink() {
+        // clears the "active" class from each of the list items in the navigation
+        document.querySelectorAll("li.nav-item").forEach(function(listItem){
+          listItem.setAttribute("class", "nav-item");
+        });
+    
+        // add the "active" class to the class attribute of the appropriate list item
+        document.getElementById(document.title).classList.add("active");
+    
+    
+      }
+
     // start up function to determine which page user is on and which function to call
     function Start() {
         let title = document.title;
