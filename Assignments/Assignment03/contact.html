@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>COMP125 - a03 - Contact</title>
+  <!-- CSS Section -->
+  <link rel="stylesheet" href="../../Content/bootstrap-solar.min.css">
+  <link rel="stylesheet" href="../../node_modules/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./Content/app.css">
+</head>
+
+<body id="bodyBackground">
+  <!-- Main Nav -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">
+      <img src="./Assets/images/logo.png" width="50" height="50" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="../../index.html">
+            <i class="fa fa-home fa-lg"></i> Home </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./a03_index.html">
+            <i class="fa fa-user-circle fa-lg"></i> Bio </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./projects.html">
+            <i class="fa fa-code fa-lg"></i> Projects </a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="./contact.html">
+            <i class="fa fa-comments fa-lg"></i> Contact
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Contact Form Section-->
+  <div class="row justify-content-center contentPlacement">
+    <div class="col-md-8 col-lg-6">
+      <div class="jumbotron">
+
+        <!--Heading and information-->
+        <div>
+          <h1 class="text-center myYellow" id="contactTitle"></h1>
+          <p id="contactInfo" class="text-center"></p>
+        </div>
+
+        <div class="card-body">
+          <p id="contactInstructions" class="text-warning"></p>
+
+          <!--Form-->
+          <form>
+            <div class="form-group">
+              <label for="FirstName">First Name: *</label>
+              <input type="text" class="form-control form-control-lg" id="FirstName" pattern="[A-Za-z]{2,}" name="FirstName" required>
+            </div>
+            <div class="form-group">
+              <label for="LastName">Last Name: *</label>
+              <input type="text" class="form-control form-control-lg" id="LastName" pattern="[A-Za-z]{2,}" name="LastName" required>
+            </div>
+            <div class="form-group">
+              <label for="ContactNumber">Phone Number: *</label>
+              <input type="text" class="form-control form-control-lg" id="ContactNumber" pattern="^(\+0?1\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$" name="ContactNumber" placeholder="123-456-7890" required>
+            </div>
+            <div class="form-group">
+              <label for="EmailAddress">Email address: *</label>
+              <input type="email" class="form-control form-control-lg" id="EmailAddress" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" name="EmailAddress" placeholder="address@example.com"
+                required>
+            </div>
+            <div class="form-group">
+              <label for="Subject">Subject: *</label>
+              <input type="text" class="form-control form-control-lg" id="Subject" name="Subject" required>
+            </div>
+            <div class="form-group">
+              <label for="Message">Message: *</label>
+              <textarea class="form-control form-control-lg" id="Message" name="Message" rows="4" required></textarea>
+            </div>
+            <hr>
+            <button id="submitButton" type="submit" class="btn btn-warning btn-lg btn-block">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Section -->
+  <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+  
+  <script src="./Scripts/bio.js"></script>
+  <script src="./Scripts/project.js"></script>
+  <script src="./Scripts/contact.js"></script>
+  <script src="./Scripts/app.js"></script>
+</body>
+</html>

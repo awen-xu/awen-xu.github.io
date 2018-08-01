@@ -1,0 +1,29 @@
+/* 
+File name: app.css
+Author's name: Awen Xu
+Website: Mini portfolio
+File description: This is the stylesheet for all three pages of the mini portfolio.
+*/
+
+/* Class for leaving padding around content*/
+.contentPlacement{
+    padding: 1em;
+}
+/* Sets the background image*/
+#bodyBackground{
+	background-image: url('../Assets/images/city.png');
+    background-size:  cover;
+}
+/* Allows picture to resize according to browser size*/
+.pictureScaling{
+    width: 100%;
+    height: auto;
+}
+/* Horizontal line thickness and margin around it*/
+hr{
+    margin: 1em;
+    border-width: 0.2em;
+}
+.myYellow{
+    color: yellow;
+}
