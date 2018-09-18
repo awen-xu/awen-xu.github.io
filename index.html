@@ -1,48 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>COMP125 - Home</title>
-    <!-- CSS Section -->
-    <link rel="stylesheet" href="./Content/bootstrap-solar.min.css">
-    <link rel="stylesheet" href="./node_modules/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./Content/app.css">
-  </head>
-<body>
-    <!-- Main Nav -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">
-          <img src="./Assets/images/logo.png" width="50" height="50" alt="">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="./index.html"><i class="fa fa-home fa-lg"></i> Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./school.html"><i class="fa fa-leanpub fa-lg"></i> School</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
 
-      <!-- Jumbotron -->
-      <div class="jumbotron">
-            <h1 class="display-4">Hello, World!</h1>
-            <p class="lead">Under construction. Not part of assignment 1.</p>
-            <hr class="my-4">
-            <p>Under construction.</p>
-          </div>
-    
-    <!-- JavaScript Section -->
-    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="./Scripts/app.js"></script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>COMP125 - Home</title>
+  <!-- CSS Section -->
+  <link rel="stylesheet" href="./Content/bootstrap-solar.min.css">
+  <link rel="stylesheet" href="./node_modules/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./Content/app.css">
+</head>
+
+<body id="bodyBackground">
+  <!-- Main Nav -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">
+      <img src="./Assets/images/logo.png" width="50" height="50" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="./index.html"><i class="fa fa-home fa-lg"></i> Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./school.html"><i class="fa fa-leanpub fa-lg"></i> Web Projects</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Jumbotron -->
+  <div class="jumbotron">
+    <h1 class="display-4 text-center myYellow">Welcome</h1>
+    <p class="lead text-center">Some people call me Ashley, others call me Awen, and the government calls me Wen Yi Xu. I respond to any of these names. I am currently a second year Centennial College student studying Health Informatics.</p>
+    <hr class="my-4">
+    <p class="lead text-center">Here are some of the projects I've done.</p>
+  </div>
+
+  <!--Section for the projects-->
+  <div class="container contentPlacement">
+    <div class="jumbotron contentPlacement">
+
+      <!--Project : Calculator-->
+      <div class="row justify-content-center">
+        <div class="col-md-6 contentPlacement">
+          <img src="./Assets/images/Calculator2.PNG" class="pictureScaling" alt="screenshot of calculator">
+        </div>
+        <div class="col-md-6 contentPlacement">
+          <h3 class="myYellow">C# Windows Forms - Calculator</h3>
+          <p>Here is a simple calculator app that has a standard mode and a quadratic equation mode. The standard mode handles common operations, such as addition, subtraction, multiplication, division, and more. The quadratic mode calculates the roots of a quadratic equation. The user inputs the coefficients needed in the quadratic equation.</p>
+        </div>
+      </div>
+      <hr>
+
+      <!--Project : Health Store Database, FoodStacks-->
+      <div class="row justify-content-center">
+        <div class="col-md-6 contentPlacement">
+          <h3 class="myYellow">SQL - Mock Health Store</h3>
+          <p>For my Database Concepts course, I have created the structure and the tables needed for a health store that sells supplements. I developed the entity-relationship diagram, and implemented the relationships in SQL developer using primary key and foreign key constraints. In addition, I also included other constraints to make sure that certain columns can't be null or can only hold a set of values.</p>
+        </div>
+        <div class="col-md-6 contentPlacement">
+          <h3 class="myYellow">Software Design - FoodStacks</h3>
+          <p>For my Software Engineering Methodologies course, I have worked in a team with 4 other students to design a project, in which a food catering business called FoodStacks is planning to expand their business by adding an online ordering system. As a team, we established the function and non functional requirements and developed UML diagrams, such as use case diagrams, class diagrams, state machine diagrams, sequence diagrams, and more.</p>
+        </div>
+      </div>
+      <hr>
+
+      <!--Project : Unity Game-->
+      <div class="row justify-content-center">
+        <div class="col-md-6 contentPlacement">
+          <img src="./Assignments/Assignment01/Assets/images/fortissimo_gameplay.png" class="pictureScaling" alt="screenshot of unity game">
+        </div>
+        <div class="col-md-6 contentPlacement">
+          <h3 class="myYellow">Unity Game - Fortissimo</h3>
+          <p>Fortissimo is a simple 2D top down shooter game that I made in high school. It was made for an assignment from my physics class. This game was used to teach younger students about a specific job related to the study of physics. In this case, the particular specification is an acoustic engineer and how its study is used in making the LRAD (Long Range Acoustic Device), which is a tool for crowd/riot control used by authorities. I used Unity to write all the codes. As there were no lessons about programming or coding in my physics class, I had to find resources online in order to learn how to write the code.</p>
+        </div>
+      </div>
+      <hr>
+
+      <!--Projects 2: Tic Tac Toe-->
+      <div class="row justify-content-center">
+        <div class="col-md-6 contentPlacement">
+          <h3 class="myYellow">TicTacToe – Java</h3>
+          <p>I made a Tic Tac Toe game through Java RTP in grade 11. It is simple in design. There are two players, and each takes turn to enter a number that determines the placement on the board. The game ends  when either a player wins, or neither win after all tiles are filled. Each tile is given a number ID, and the players place their markers on a specific tile by entering the number associated with that tile. If statements are used to determine the outcome of the game.</p>
+        </div>
+        <div class="col-md-6">
+          <img src="./Assignments/Assignment01/Assets/images/tictactoe_gameplay.png" class="pictureScaling" alt="screenshot of tictactoe">
+        </div>
+      </div>
+      <hr>
+
+      <!--Projects 3: Battleship-->
+      <div class="row justify-content-center">
+        <div class="col-md-6 contentPlacement">
+          <img src="./Assignments/Assignment01/Assets/images/battleship_attack.png" class="pictureScaling" alt="screenshot of battleship">
+        </div>
+        <div class="col-md-6 contentPlacement">
+          <h3 class="myYellow">Battleship – Java</h3>
+          <p>In grade 12, I wrote a little program that allows two players to play battleship. The game starts with having player 1 set down their ships on the tiles they want. Then, player 2 does the same. After the ship placement, the players take turn at guessing were their opponent’s ships are by clicking on the tiles. If they guess correctly, there will be an 'X' indicating that they have hit a ship. There is a status bar on the bottom that informs the players on the current standing of the game. The game ends when all ship pieces of one player are found.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- JavaScript Section -->
+  <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="./Scripts/app.js"></script>
 </body>
+
 </html>

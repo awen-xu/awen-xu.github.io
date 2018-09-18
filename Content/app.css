@@ -1,1 +1,22 @@
 /* Custom CSS goes here */
+.contentPlacement{
+    padding: 1em;
+}
+/* Sets the background image*/
+#bodyBackground{
+	background-image: url('../Assignments/Assignment01/Assets/images/city.png');
+    background-size:  cover;
+}
+/* Allows picture to resize according to browser size*/
+.pictureScaling{
+    width: 100%;
+    height: auto;
+}
+/* Horizontal line thickness and margin around it*/
+hr{
+    margin: 1em;
+    border-width: 0.2em;
+}
+.myYellow{
+    color: yellow;
+}
